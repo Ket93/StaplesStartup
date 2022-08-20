@@ -6,12 +6,13 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
+import "./CreatorNav.css";
 import { Stack, Divider } from "@mui/material";
 
 export const CreatorNav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar className="bigNavbar" position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -23,10 +24,9 @@ export const CreatorNav = () => {
             <MenuIcon />
           </IconButton>
           <Stack direction="row" spacing={2} sx={{ flexGrow: 1 }}>
-            <Typography variant="h6">Title</Typography>
+            <Typography variant="h6">Staples Startup</Typography>
             <Divider color="inherit" />
-            <Button color="inherit">Data</Button>
-            <Button color="inherit">Data</Button>
+            <Button color="inherit">View Studio Locations</Button>
           </Stack>
           <Button color="inherit">Login</Button>
         </Toolbar>
