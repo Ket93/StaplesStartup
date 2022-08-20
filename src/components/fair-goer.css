@@ -1,0 +1,13 @@
+.locationCardDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 15vh;
+}
+
+.LocationCard {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
