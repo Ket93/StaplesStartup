@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Creator } from "./components/creator.js";
+import { Creator } from "./components/creator/creator.js";
 import { FairGoer } from "./components/fair-goer.js";
 import { HoverRating } from "./components/review.js";
 import "./App.css";
