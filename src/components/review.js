@@ -3,6 +3,7 @@ import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 import Button from '@mui/material/Button';
+import { CreatorNav } from "./creator/CreatorNav";
 import "./review.css"
 const axios = require('axios');
 // import { useForm } from "react-hook-form";
@@ -28,17 +29,27 @@ function getLabelText(value) {
 }
 
 function handleData() {
-    let name = document.querySelector(".nameInput").value();
-    let comment = document.querySelector(".reviewInput").value();
-
-    axios({
-        method: 'post',
-        url: '/user/12345',
-        data: {
-          rating: rating,
-          comment: comment
-        }
+    let name = document.querySelector(".nameInput").value;
+    let comment = document.querySelector(".reviewInput").value;
+    axios.post('http://localhost:4000/rating/6300fa84a0664a69c52f660d', {
+        rating: rating,
+        comment: comment
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
       });
+
+    // axios({
+    //     method: 'post',
+    //     url: 'localhost:4000/rating/6300fa84a0664a69c52f660d',
+    //     data: {
+    //       rating: rating,
+    //       comment: comment
+    //     }
+    //   });
 }
 
 export const HoverRating = () => {
@@ -48,6 +59,7 @@ export const HoverRating = () => {
 
     return (
         <>
+              <CreatorNav />
             <div className="reviewBigContainer">
                 <img className="reviewImage" src="https://i.ytimg.com/vi/uuSP4bBhCAw/maxresdefault.jpg"></img>
                 <Box className="reviewContainer"
@@ -67,7 +79,7 @@ export const HoverRating = () => {
                         <br></br>
                         <label>Review</label>
                         <br></br>
-                        <textArea className="reviewInput" name="review" ></textArea>
+                        <textarea className="reviewInput" name="review" ></textarea>
                         <br></br>
                         <br></br>
 
@@ -90,7 +102,7 @@ export const HoverRating = () => {
                             <Box className="starLabel" sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
                         )}
 
-                        <Button className="submitButton" type="submit" variant="contained" onClick={handleData}>Submit Review!</Button>
+                        <Button className="submitButton" type="button" variant="contained" onClick={handleData}>Submit Review!</Button>
 
                     </form>
 
