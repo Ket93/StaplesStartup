@@ -9,51 +9,85 @@
 }
 
 .red {
-    color: red;
+    color: #DC0000;
 }
 
-.title {
-    margin: 0px;
-    margin-top: 7vh;
-    font-size: 4em;
-    margin-left: 9vw;
-    margin-bottom: 1vw;
+.white {
+    color: #FFFFFF
+}
+
+.header {
+    position: relative;
 }
 
 #studio {
     position: absolute;
-    object-position: 20px 20px;
+    object-position: 0px 0px;
+    width: 50%;
+    z-index: 1;
 }
 
 #startup {
     position: absolute;
     object-position: 0px 0px;
     width: 100%;
+    z-index: 0;
 }
 
-.shade {
+.title {
     position: absolute;
-    width: 100%;
-    opacity: 50%;
-    color: black;
+    text-align: center;
+    margin: auto;
 }
 
-#marker {
-    position: absolute;
+#marker1 {
+    position: relative;
+    object-position: 10px 500px;
+    width: 10px;
+    height: 10px;
+}
+
+#marker2 {
+    position: relative;
+    object-position: 10px 500px;
+}
+
+#marker3 {
+    position: relative;
+    object-position: 10px 500px;
+}
+
+#marker4 {
+    position: relative;
+    object-position: 10px 500px;
+}
+
+#marker5 {
+    position: relative;
+    object-position: 10px 500px;
+}
+
+#marker6 {
+    position: relative;
+    object-position: 10px 500px;
+}
+
+#marker7 {
+    position: relative;
     object-position: 10px 500px;
 }
 
 #bc {
-    position: absolute;
+    position: relative;
     object-position: 10px 200px;
 }
 
 #alb {
-    position: absolute;
+    position: relative;
     object-position: 50px 200px;
 }
 
 #on {
-    position: absolute;
+    position: relative;
     object-position: 90px 200px;
 }
