@@ -25,7 +25,7 @@ export const LocationCard = () => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
+        <Button href="/reviews" size="small">Leave a Review</Button>
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
