@@ -9,7 +9,7 @@ import {
   Rating,
 } from "@mui/material";
 import {
-  ScatterChart,
+  ScatterChart, 
   Scatter,
   XAxis,
   YAxis,

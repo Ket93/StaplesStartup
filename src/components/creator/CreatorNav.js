@@ -9,7 +9,15 @@ import Button from "@mui/material/Button";
 import "./CreatorNav.css";
 import { Stack, Divider } from "@mui/material";
 
-export const CreatorNav = () => {
+export const CreatorNav = (props) => {
+  const navItems = props.navItems;
+  // const navItems = [
+  //   {"text": "hello0", "link":"https://google.com"},
+  //   {"text": "hello1", "link":"https://google.com"},
+  //   {"text": "hello2", "link":"https://google.com"},
+  //   {"text": "hello3", "link":"https://google.com"},
+  //   {"text": "hello3", "link":"https://google.com"}, 
+  // ]
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar className="bigNavbar" position="static">
@@ -25,8 +33,12 @@ export const CreatorNav = () => {
           </IconButton>
           <Stack direction="row" spacing={2} sx={{ flexGrow: 1 }}>
             <Typography variant="h6">Staples Startup</Typography>
-            <Divider color="inherit" />
-            <Button color="inherit">View Studio Locations</Button>
+            
+            {navItems.map((item, i) => {
+              return (
+                <Button href={item.link} color="inherit">{item.text}</Button>
+              )
+            })}
           </Stack>
           <Button color="inherit">Login</Button>
         </Toolbar>
