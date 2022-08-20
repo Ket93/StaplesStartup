@@ -13,6 +13,10 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  timestamp: {
+    type: Number,
+    required: true,
+  },
 });
 
 const Product = mongoose.model("Product", ProductSchema);

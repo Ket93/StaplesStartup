@@ -1,22 +1,23 @@
-import cors from "cors";
-import express from "express";
-import mongoose from "mongoose";
-
 // Loads the configuration from config.env to process.env
 import dotenv from "dotenv";
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 const URI = process.env.ATLAS_URI;
 
+import cors from "cors";
+import express from "express";
+import mongoose from "mongoose";
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Global error handling
-app.use(function (err, _req, res) {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
-});
+// Connecting all routes
+import RatingRoutes from "./routes/RatingRoutes.js";
+app.use("/rating", RatingRoutes);
+
+import ProductRoutes from "./routes/ProductRoutes.js";
+app.use("/product", ProductRoutes);
 
 const start = async () => {
   try {

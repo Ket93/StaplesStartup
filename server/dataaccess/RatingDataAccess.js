@@ -25,6 +25,10 @@ class RatingDataAccess {
     const ratings = await RatingSchema.find(query).lean();
     return ratings;
   }
+
+  async create(ratingObj) {
+    await RatingSchema.create(ratingObj);
+  }
 }
 
 export default RatingDataAccess;
