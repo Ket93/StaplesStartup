@@ -15,4 +15,16 @@ export const locations = [
     id: "63010ee0489cd030c65f7412",
     location: "Loc 4",
   },
+  {
+    id: "63018963739542ec56045bc8",
+    location: "Loc 5",
+  },
+  {
+    id: "6301896d85398be689ca4940",
+    location: "Loc 6",
+  },
+  {
+    id: "63018977a19b889d20c952c0",
+    location: "Loc 7",
+  },
 ];
