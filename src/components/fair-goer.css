@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 .mapDiv> {
+    height: 1000px;
     margin-bottom: 12vh;
 }
 
@@ -18,12 +21,15 @@
 
 .header {
     position: relative;
+    height: 500px;
+    width: 100%;
 }
 
 #studio {
     position: absolute;
+    left: 20px;
     object-position: 0px 0px;
-    width: 50%;
+    width: 30%;
     z-index: 1;
 }
 
@@ -36,58 +42,121 @@
 
 .title {
     position: absolute;
-    text-align: center;
-    margin: auto;
+    font-family: 'DM Sans', sans-serif;
+    left: 25vw;
+    top: 20vh;
+    font-size: 70px;
 }
 
-#marker1 {
-    position: relative;
-    object-position: 10px 500px;
-    width: 10px;
-    height: 10px;
+#findLoc {
+    z-index: 5;
+    background-color:#DC0000;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    position: absolute;
+    left: 40vw;
+    top: 50vh;
+    width: 20vw;
+    height: 7vh;
+    border: none;
 }
 
-#marker2 {
-    position: relative;
-    object-position: 10px 500px;
-}
-
-#marker3 {
-    position: relative;
-    object-position: 10px 500px;
-}
-
-#marker4 {
-    position: relative;
-    object-position: 10px 500px;
-}
-
-#marker5 {
-    position: relative;
-    object-position: 10px 500px;
-}
-
-#marker6 {
-    position: relative;
-    object-position: 10px 500px;
-}
-
-#marker7 {
-    position: relative;
-    object-position: 10px 500px;
+.BC { 
+    left: 100px;
+    top: 800px;
+    position: absolute;
+    height: 100%;
 }
 
 #bc {
-    position: relative;
-    object-position: 10px 200px;
+    width: 70%;
+    background-size: contain;
+}
+
+#marker1 {
+    width: 30px;
+    position: absolute;
+    left: 18vw;
+    top: 37vh;
+}
+
+#label1 {
+    position: absolute;
+    color: #DC0000;
+    font-weight: bold;
+    left: 15vw;
+    top: 32vh;
+}
+
+.ALB {
+    position: absolute;
+    left: 500px;
+    top: 800px;
+    height: 100%;
 }
 
 #alb {
-    position: relative;
-    object-position: 50px 200px;
+    width: 70%;
+    background-size: contain;
+}
+
+#marker2 {
+    width: 30px;
+    position: absolute;
+    left: 13vw;
+    top: 40vh;
+}
+
+.ON {
+    position: absolute;
+    left: 800px;
+    top: 800px;
+    height: 100%;
 }
 
 #on {
-    position: relative;
-    object-position: 90px 200px;
+    width: 100%;
+    background-size: contain;
+}
+
+#marker3 {
+    position: absolute;
+    width: 30px;
+    left: 30vw;
+    top: 38vh;
+}
+
+#marker4 {
+    position: absolute;
+    width: 30px;
+    left: 27vw;
+    top: 42vh;
+}
+
+#marker5 {
+    position: absolute;
+    width: 30px;
+    left: 25vw;
+    top: 46vh;
+}
+
+#marker6 {
+    position: absolute;
+    width: 32px;
+    left: 26vw;
+    top: 44vh;
+}
+
+#marker7 {
+    position: absolute;
+    width: 30px;
+    left: 24vw;
+    top: 50vh;
+}
+
+#location {
+    position: absolute;
+    top: 100vh;
+    left: 25vw;
 }

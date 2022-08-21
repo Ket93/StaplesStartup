@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LocationCard } from "./locationCard.js";
 import "./fair-goer.css";
 import { HashLink } from 'react-router-hash-link';
@@ -9,45 +9,61 @@ import STUDIO from '../images/staples-studio.png';
 import STARTUP from '../images/happy-startup.jpg';
 import MARKER from '../images/location-marker.png';
 import { Button} from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import SearchIcon from '@mui/icons-material/Search';
 
 export const FairGoer = () => {
+  const [isShown, setIsShown] = useState(false);
   return (
     <>
       <div className="header">
         <img src={STARTUP} id='startup'/>
         <img src={STUDIO} id='studio'/>
-        <h1 className="title"><span className="white">Welcome to</span><span className="red">Staples Startup</span></h1>
+        <h1 className="title"><span className="white">WELCOME TO </span><span className="red">STAPLES STARTUP</span></h1>
+        <Link to="./#location">
+        <Button id="findLoc" variant="contained" startIcon={<SearchIcon/>}>
+          Find a location
+        </Button>
+	      </Link>
       </div>
-      <Link to="./#location">
-	        <Button> Find Location </Button>
-	    </Link>
       <div className="mapDiv">
-        <img src={BC} id='bc'/>
-        <img src={ALB} id='alb'/>
-        <img src={ON} id='on'/>
+        <div className="BC">
+          <img src={BC} id='bc'/>
+          <a href="/kelowna" locationId='63010ed6b24277ef4c666d93'>
+            <img src={MARKER} id='marker1' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
+          </a>
+          {isShown && (
+            <div id="label1">
+              Kelowna
+            </div>
+          )}
+        </div>
 
-        <a href="/calgary" id='63010eb7e4d31a1b84ce37b4'>
-          <img src={MARKER} id='marker1'/>
-        </a>
-        <a href="/kelowna" id='63010eb7e4d31a1b84ce37b4'>
-          <img src={MARKER} id='marker2'/>
-        </a>
-        <a href="/oakville" id='63010eb7e4d31a1b84ce37b4'>
-          <img src={MARKER} id='marker3'/>
-        </a>
-        <a href="/ottawa" id='63010eb7e4d31a1b84ce37b4'>
-          <img src={MARKER} id='marker4'/>
-        </a>
-        <a href="/corktown" id='63010eb7e4d31a1b84ce37b4'>
-          <img src={MARKER} id='marker5'/>
-        </a>
-        <a href="/midtown" id='63010eb7e4d31a1b84ce37b4'>
-          <img src={MARKER} id='marker6'/>
-        </a>
-        <a href="/university" id='63010eb7e4d31a1b84ce37b4'>
-          <img src={MARKER} id='marker7'/>
-        </a>
+        <div className="ALB">
+          <img src={ALB} id='alb'/>
+          <a href="/calgary" locationId='63010eb7e4d31a1b84ce37b4'>
+            <img src={MARKER} id='marker2' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
+          </a>
+        </div>
+        
+        <div className="ON">
+          <img src={ON} id='on'/>
+          <a className="anchor" href="/oakville" locationId='63010eb7e4d31a1b84ce37b4'>
+            <img src={MARKER} id='marker3' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
+          </a>
+          <a href="/ottawa" locationId='63010eb7e4d31a1b84ce37b4'>
+            <img src={MARKER} id='marker4' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
+          </a>
+          <a href="/corktown" locationId='63010eb7e4d31a1b84ce37b4'>
+            <img src={MARKER} id='marker5' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
+          </a>
+          <a href="/midtown" locationId='63010eb7e4d31a1b84ce37b4'>
+            <img src={MARKER} id='marker6' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
+          </a>
+          <a href="/university" locationId='63010eb7e4d31a1b84ce37b4'>
+            <img src={MARKER} id='marker7' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
+          </a>
+        </div>
       </div>
       <h2 id='location' className="titleChooseLocation">Choose a Location</h2>
     </>
