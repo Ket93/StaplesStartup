@@ -1,6 +1,6 @@
 .reviewBigContainer {
-    margin-top: 30vh;
-    margin-bottom: 30vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +30,7 @@
 .reviewImage {
     width: 50%;
     margin-right: 10vw;
+    filter: drop-shadow(0 0 1rem black);
 }
 
 .submitButton {

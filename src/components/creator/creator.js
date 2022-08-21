@@ -6,7 +6,8 @@ import { CreatorInput } from "./CreatorInput";
 export const Creator = () => {
   return (
     <>
-      <CreatorNav navItems={[{"text": "Data", "link":"/dataDisplay"}]}/>
+      <CreatorNav navItems={[{"text": "Data", "link":"/dataDisplay"},
+      {"text": ""}]}/>
       <Stack direction="column" spacing={5} mx={2} my={5} textAlign="center">
         <Typography variant="h2">Describe your project</Typography>
         <CreatorInput />

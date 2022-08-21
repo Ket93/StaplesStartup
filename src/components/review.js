@@ -102,7 +102,7 @@ export const HoverRating = () => {
                             <Box className="starLabel" sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
                         )}
 
-                        <Button className="submitButton" type="button" variant="contained" onClick={handleData}>Submit Review!</Button>
+                        <Button className="submitButton" type="submit" variant="contained" onClick={handleData}>Submit Review!</Button>
 
                     </form>
 

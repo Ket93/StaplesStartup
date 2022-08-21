@@ -4,6 +4,7 @@ import { FairGoer } from "./components/fair-goer.js";
 import { HoverRating } from "./components/review.js";
 import { DisplayItems } from "./components/displayItems.js";
 import { DataDisplay } from "./components/creator/DataDisplay";
+import {Kelowna} from "./components/kelowna.js";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/creator" element={<Creator />} />
         <Route path="/dataDisplay" element={<DataDisplay />} />
         <Route path="/displayItems" element={<DisplayItems />} />
+        <Route path="/kelowna" element={<Kelowna />} />
       </Routes>
     </BrowserRouter>
   );

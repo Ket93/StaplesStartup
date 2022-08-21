@@ -34,7 +34,7 @@ export const CreatorNav = (props) => {
           <Stack direction="row" spacing={2} sx={{ flexGrow: 1 }}>
             <Typography variant="h6">Staples Startup</Typography>
             
-            {navItems.map((item, i) => {
+            {navItems && navItems.map((item, i) => {
               return (
                 <Button href={item.link} color="inherit">{item.text}</Button>
               )
