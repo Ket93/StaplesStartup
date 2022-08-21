@@ -160,3 +160,21 @@
     top: 100vh;
     left: 25vw;
 }
+
+.text{
+    position: absolute;
+    top: 200vh;
+    height: 100%;
+    width: 100%;
+}
+
+#info {
+    font-family: 'DM Sans', sans-serif;
+    color: gray;
+    font-weight: lighter;
+    padding: 50px;
+    width: 70vw;
+    margin-left: 10vw;
+    text-align: center;
+    margin-top: -10vh;
+}

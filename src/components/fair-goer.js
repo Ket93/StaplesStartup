@@ -66,6 +66,13 @@ export const FairGoer = () => {
         </div>
       </div>
       <h2 id='location' className="titleChooseLocation">Choose a Location</h2>
+      <div className='text'>
+        <h3 id='info'>
+          With a total of 7 Staples Studio locations nationwide, Staples Startup provides a unique
+          opportunity to foster the growth of thousands of start-up companies and entrepreuneurs.
+          Because at Staples, we believe that everyone deserves to have their ideas seen, and for innovation to grow.
+        </h3>
+      </div>
     </>
   )
 }
