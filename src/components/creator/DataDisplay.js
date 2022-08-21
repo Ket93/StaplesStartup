@@ -9,7 +9,7 @@ import {
   Rating,
 } from "@mui/material";
 import {
-  ScatterChart, 
+  ScatterChart,
   Scatter,
   XAxis,
   YAxis,
@@ -34,6 +34,7 @@ export const DataDisplay = () => {
         setBackendData(response.data.ratings);
         console.log("data collected:", response.data.ratings);
       } catch (err) {
+        console.log(err);
         setBackendData([]);
       }
     };
@@ -76,7 +77,7 @@ export const DataDisplay = () => {
 
   return (
     <>
-      <CreatorNav />
+      <CreatorNav navItems={[{ text: "Create", link: "/create" }]} />
       <Stack
         direction="column"
         spacing={5}
